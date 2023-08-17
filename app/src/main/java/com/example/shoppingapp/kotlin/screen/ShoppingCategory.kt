@@ -20,7 +20,8 @@ class ShoppingCategory {
             // TODO 1. 장바구니로 이동
         } else {
             if (categories.contains(selectedCategory)) {
-                // TODO 2. 카테고리 상품 목록 보옂기
+                val shoppingProductList = ShoppingProductList()
+                shoppingProductList.showProduct(selectedCategory)
             } else {
                 showErrorMessage(selectedCategory)
             }
