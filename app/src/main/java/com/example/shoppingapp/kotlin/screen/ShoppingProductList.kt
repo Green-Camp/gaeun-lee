@@ -2,6 +2,8 @@ package com.example.shoppingapp.kotlin.screen
 
 import com.example.shoppingapp.kotlin.data.CartItems
 import com.example.shoppingapp.kotlin.data.Product
+import com.example.shoppingapp.kotlin.extensions.getNotEmptyInt
+import com.example.shoppingapp.kotlin.extensions.getNotEmptyString
 
 class ShoppingProductList {
     private val products = arrayOf(
@@ -45,11 +47,11 @@ class ShoppingProductList {
             """.trimIndent(),
         )
 
-        val selectedIndex = readLine()?.toIntOrNull()!!
+        val selectedIndex = readLine().getNotEmptyInt()
         categoryProducts?.getOrNull(selectedIndex)?.let { product ->
             CartItems.addProduct(product)
             println("=> 장바구니로 이동하시려면 #을, 계속 쇼핑하시려면 *을 입력해주세요")
-            val answer = readLine()
+            val answer = readLine().getNotEmptyString()
             if (answer == "#") {
                 val shoppingCart = ShoppingCart()
                 shoppingCart.showCartItems()
