@@ -6,7 +6,7 @@ import com.example.shoppingapp.kotlin.data.Product
 import com.example.shoppingapp.kotlin.extensions.getNotEmptyInt
 import com.example.shoppingapp.kotlin.extensions.getNotEmptyString
 
-class ShoppingProductList {
+class ShoppingProductList : Screen() {
     private val products = arrayOf(
         Product("패션", "겨울 패딩"),
         Product("패션", "겨울 바지"),
@@ -23,6 +23,7 @@ class ShoppingProductList {
     }
 
     fun showProducts(selectedCategory: String) {
+        ScreenStack.push(this)
         val categoryProduct = categories[selectedCategory]
         if (!categoryProduct.isNullOrEmpty()) {
             println(

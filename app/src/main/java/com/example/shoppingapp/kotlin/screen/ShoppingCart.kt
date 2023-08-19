@@ -3,10 +3,11 @@ package com.example.shoppingapp.kotlin.screen
 import com.example.shoppingapp.kotlin.LINE_DIVIDER
 import com.example.shoppingapp.kotlin.data.CartItems
 
-class ShoppingCart {
+class ShoppingCart : Screen() {
     private val products = CartItems.products
 
     fun showCartItems() {
+        ScreenStack.push(this)
         if (products.isNotEmpty()) {
             println(
                 products.keys.joinToString(
