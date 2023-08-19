@@ -1,5 +1,6 @@
 package com.example.shoppingapp.kotlin.screen
 
+import com.example.shoppingapp.kotlin.LINE_DIVIDER
 import com.example.shoppingapp.kotlin.data.CartItems
 
 class ShoppingCart {
@@ -11,7 +12,7 @@ class ShoppingCart {
                 products.keys.joinToString(
                     separator = ", \n",
                     prefix = """
-                    ***=======================***
+                    $LINE_DIVIDER
                     장바구니에 담은 상품 목록 입니다.
                     """.trimIndent(),
                 ) { product ->
