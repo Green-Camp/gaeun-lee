@@ -1,0 +1,40 @@
+{
+  "title": {
+    "text": "IVY님, 이런 상품\n어때요?",
+    "icon_url": "https://github.com/Green-Camp/gaeun-lee/assets/92314556/8b8779ed-1dc9-49d2-8ed7-6734012d9281"
+  },
+  "top_banners": [
+    {
+      "background_image_url": "https://github.com/Green-Camp/gaeun-lee/assets/92314556/f5b82e70-d82f-4d4a-87f5-4d3e3471407f",
+      "badge": {
+        "label": "기획전",
+        "background_color": "#52514d"
+      },
+      "label": "따스한 겨울\n준비하기",
+      "product_detail": {
+        "brand_name": "twg. official",
+        "label": "캐시미어 100% 터틀넥 스웨터",
+        "discount_rate": 9,
+        "price": 102000,
+        "thumbnail_image_url": "https://github.com/Green-Camp/gaeun-lee/assets/92314556/9c62e9bb-982d-4829-a48f-eb24badfc638",
+        "product_id": "FW-twg-sweater-1"
+      }
+    },
+    {
+      "background_image_url": "https://github.com/Green-Camp/gaeun-lee/assets/92314556/03614c71-710c-4085-9fa4-3197a3e4a566",
+      "badge": {
+        "label": "기획전",
+        "background_color": "#967a6d"
+      },
+      "label": "나만의\n홈 오피스",
+      "product_detail": {
+        "brand_name": "Desk",
+        "label": "슬림 데스크 800",
+        "discount_rate": 16,
+        "price": 160000,
+        "thumbnail_image_url": "https://github.com/Green-Camp/gaeun-lee/assets/92314556/6bc1ed38-173c-4ef7-986f-8b0beb09bec6",
+        "product_id": "desk-1"
+      }
+    }
+  ]
+}
