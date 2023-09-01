@@ -1,5 +1,7 @@
 package com.example.shoppingapp
 
+import android.graphics.Color
+import android.graphics.drawable.ColorDrawable
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -8,6 +10,8 @@ import android.widget.TextView
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
+import java.text.DecimalFormat
+import kotlin.math.roundToInt
 
 class HomeBannerAdapter :
     ListAdapter<Banner, HomeBannerAdapter.HomeBannerViewHolder>(BannerDiffCallback()) {
@@ -23,7 +27,6 @@ class HomeBannerAdapter :
     }
 
     class HomeBannerViewHolder(view: View) : RecyclerView.ViewHolder(view) {
-        // view는 Homebanner에서 inflate 시킬 layout을 의미
 
         private val bannerImageView = view.findViewById<ImageView>(R.id.iv_banner_image)
         private val bannerBadgeTextView = view.findViewById<TextView>(R.id.tv_banner_badge)
@@ -42,7 +45,36 @@ class HomeBannerAdapter :
             view.findViewById<TextView>(R.id.tv_banner_detail_product_price)
 
         fun bind(banner: Banner) {
-            GlideApp.with(itemView).load(banner.backgroundImageUrl).into(bannerImageView)
+            loadImage(banner.backgroundImageUrl, bannerImageView)
+
+            bannerBadgeTextView.text = banner.badge.label
+            bannerBadgeTextView.background =
+                ColorDrawable(Color.parseColor(banner.badge.backgroundColor))
+            bannerBadgeTextView.text = banner.label
+            loadImage(banner.productDetail.thumbnailImageUrl, bannerDetailThumbnailImageView)
+            bannerDetailBrandLabelTextView.text = banner.productDetail.brandName
+            bannerDetailProductLabelTextView.text = banner.productDetail.label
+            applyPriceFormat(bannerDetailDiscountPriceTextView, banner.productDetail.price)
+            calculateDiscountAmount(
+                bannerDetailPriceTextView,
+                banner.productDetail.discountRate,
+                banner.productDetail.price,
+            )
+
+        }
+
+        private fun calculateDiscountAmount(view: TextView, discountRate: Int, price: Int) {
+            val discountPrice = (((100 - discountRate) / 100.0) * price).roundToInt()
+            applyPriceFormat(view, discountPrice)
+        }
+
+        private fun applyPriceFormat(view: TextView, price: Int) {
+            val decimalFormat = DecimalFormat("#,###")
+            view.text = decimalFormat.format(price) + "원"
+        }
+
+        private fun loadImage(urlString: String, imageView: ImageView) {
+            GlideApp.with(itemView).load(urlString).into(imageView)
         }
     }
 }
