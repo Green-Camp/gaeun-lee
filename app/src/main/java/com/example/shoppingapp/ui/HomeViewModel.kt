@@ -5,8 +5,9 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.example.shoppingapp.Banner
 import com.example.shoppingapp.Title
+import com.example.shoppingapp.repository.HomeRepository
 
-class HomeViewModel : ViewModel() {
+class HomeViewModel(private val homeRepository: HomeRepository) : ViewModel() {
 
     private val _title = MutableLiveData<Title>()
     val title: LiveData<Title> = _title
@@ -14,7 +15,15 @@ class HomeViewModel : ViewModel() {
     private val _topBanners = MutableLiveData<List<Banner>>()
     val topBanner: LiveData<List<Banner>> = _topBanners
 
-    fun loadHomeData() {
-        // TODO Data Layer - Repository에 요청
+    init {
+        loadHomeData()
+    }
+
+    private fun loadHomeData() {
+        val homeData = homeRepository.getHomeData()
+        homeData?.let {
+            _title.value = homeData.title
+            _topBanners.value = homeData.topBanners
+        }
     }
 }
