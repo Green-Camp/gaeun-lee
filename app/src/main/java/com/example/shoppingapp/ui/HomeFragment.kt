@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.viewModels
 import androidx.viewpager2.widget.ViewPager2
 import com.example.shoppingapp.*
 import com.google.android.material.tabs.TabLayout
@@ -15,6 +16,8 @@ import com.google.android.material.tabs.TabLayoutMediator
 import com.google.gson.Gson
 
 class HomeFragment : Fragment() {
+
+    private val viewModel by viewModels<HomeViewModel>()
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -40,11 +43,17 @@ class HomeFragment : Fragment() {
             val gson = Gson()
             val homeData = gson.fromJson(homeJsonString, HomeData::class.java)
 
-            toolbarTitle.text = homeData.title.text
-            GlideApp.with(this).load(homeData.title.iconUrl).into(toolbarIcon)
+            viewModel.title.observe(
+                viewLifecycleOwner,
+            ) { title ->
+                toolbarTitle.text = title.text
+                GlideApp.with(this).load(title.iconUrl).into(toolbarIcon)
+            }
 
-            viewpager.adapter = HomeBannerAdapter().apply {
-                submitList(homeData.topBanners)
+            viewModel.topBanner.observe(viewLifecycleOwner) { banners ->
+                viewpager.adapter = HomeBannerAdapter().apply {
+                    submitList(banners)
+                }
             }
 
             val pageWidth = resources.getDimension(R.dimen.viewpager_item_width)
