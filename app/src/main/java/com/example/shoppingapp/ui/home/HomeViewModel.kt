@@ -1,10 +1,10 @@
-package com.example.shoppingapp.ui
+package com.example.shoppingapp.ui.home
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.example.shoppingapp.Banner
-import com.example.shoppingapp.Title
+import com.example.shoppingapp.model.Banner
+import com.example.shoppingapp.model.Title
 import com.example.shoppingapp.repository.HomeRepository
 
 class HomeViewModel(private val homeRepository: HomeRepository) : ViewModel() {

@@ -1,6 +1,6 @@
 package com.example.shoppingapp.repository
 
-import com.example.shoppingapp.HomeData
+import com.example.shoppingapp.model.HomeData
 
 interface HomeDataSource {
 

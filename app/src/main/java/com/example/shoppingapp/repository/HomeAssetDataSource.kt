@@ -1,7 +1,7 @@
 package com.example.shoppingapp.repository
 
 import com.example.shoppingapp.AssetLoader
-import com.example.shoppingapp.HomeData
+import com.example.shoppingapp.model.HomeData
 import com.google.gson.Gson
 
 class HomeAssetDataSource(private val assetLoader: AssetLoader) : HomeDataSource {

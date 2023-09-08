@@ -1,4 +1,4 @@
-package com.example.shoppingapp
+package com.example.shoppingapp.ui.home
 
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
@@ -10,6 +10,9 @@ import android.widget.TextView
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
+import com.example.shoppingapp.model.Banner
+import com.example.shoppingapp.GlideApp
+import com.example.shoppingapp.R
 import java.text.DecimalFormat
 import kotlin.math.roundToInt
 
