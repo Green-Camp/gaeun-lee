@@ -6,5 +6,7 @@ import com.example.shoppingapp.GlideApp
 
 @BindingAdapter("imageUrl")
 fun loadImage(view: ImageView, imageUrl: String) {
-    GlideApp.with(view).load(imageUrl).into(view)
+    if (!imageUrl.isNullOrEmpty()) {
+        GlideApp.with(view).load(imageUrl).into(view)
+    }
 }
