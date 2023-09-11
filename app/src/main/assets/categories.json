@@ -21,7 +21,7 @@
     {
       "category_id": "electronics",
       "label": "가전/디지털",
-      "thumbnail_image_url": "https://github.com/Green-Camp/gaeun-lee/assets/92314556/5143d020-37f7-47ae-b872-ba73356338ae",
+      "thumbnail_image_url": "https://github.com/Green-Camp/gaeun-lee/assets/92314556/66ec3877-0b91-43a4-8832-d7c43fb24ada",
       "updated": false
     },
     {
@@ -33,43 +33,43 @@
     {
       "category_id": "sports",
       "label": "스포츠/레저",
-      "thumbnail_image_url": "https://github.com/Green-Camp/gaeun-lee/assets/92314556/24cabea5-cf7b-4ac1-83ea-e31c34846e85",
+      "thumbnail_image_url": "https://github.com/Green-Camp/gaeun-lee/assets/92314556/48a03921-a1aa-43d6-a8e6-8675f89d12ff",
       "updated": false
     },
     {
       "category_id": "books",
       "label": "도서/음반",
-      "thumbnail_image_url": "https://github.com/Green-Camp/gaeun-lee/assets/92314556/24cabea5-cf7b-4ac1-83ea-e31c34846e85",
+      "thumbnail_image_url": "https://github.com/Green-Camp/gaeun-lee/assets/92314556/cd14d649-f8f7-400e-b5dc-14b607e0e9d8",
       "updated": false
     },
     {
       "category_id": "pets",
       "label": "반려동물",
-      "thumbnail_image_url": "https://github.com/Green-Camp/gaeun-lee/assets/92314556/f2839934-a385-4624-9906-e7fbb979f219",
+      "thumbnail_image_url": "https://github.com/Green-Camp/gaeun-lee/assets/92314556/91802f3f-0598-48d4-9c07-37a9af34a81b",
       "updated": false
     },
     {
       "category_id": "car",
       "label": "자동차",
-      "thumbnail_image_url": "https://github.com/Green-Camp/gaeun-lee/assets/92314556/b85a53cd-8066-42e5-ab42-c8f65c572e2e",
+      "thumbnail_image_url": "https://github.com/Green-Camp/gaeun-lee/assets/92314556/2ba5b2e5-03dc-417e-bf4b-b8d50e3649bb",
       "updated": false
     },
     {
       "category_id": "fancy_goods",
       "label": "잡화",
-      "thumbnail_image_url": "https://user-images.githubusercontent.com/20774764/152873925-a5be3785-622c-4195-a3aa-da80722c91b4.jpg",
+      "thumbnail_image_url": "https://github.com/Green-Camp/gaeun-lee/assets/92314556/20f61388-1c63-48c5-9ec8-40cf20f800c5",
       "updated": false
     },
     {
       "category_id": "food",
       "label": "식품",
-      "thumbnail_image_url": "https://user-images.githubusercontent.com/20774764/152873917-c48662ef-a5f9-4306-abd9-0e738c8ebe2d.jpg",
+      "thumbnail_image_url": "https://github.com/Green-Camp/gaeun-lee/assets/92314556/61dff37a-5432-4721-afb2-f725fc57c875",
       "updated": false
     },
     {
       "category_id": "beauty",
       "label": "뷰티",
-      "thumbnail_image_url": "https://github.com/Green-Camp/gaeun-lee/assets/92314556/4ba2eda7-cfe2-47b6-8ac8-8734a479ca3b",
+      "thumbnail_image_url": "https://github.com/Green-Camp/gaeun-lee/assets/92314556/1c659e14-e0c2-4e08-8d42-198826fdbb11",
       "updated": true
     }
   ]
