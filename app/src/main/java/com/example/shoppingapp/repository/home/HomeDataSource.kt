@@ -1,4 +1,4 @@
-package com.example.shoppingapp.repository
+package com.example.shoppingapp.repository.home
 
 import com.example.shoppingapp.model.HomeData
 

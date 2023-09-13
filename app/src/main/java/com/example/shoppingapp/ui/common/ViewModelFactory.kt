@@ -5,10 +5,10 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import com.example.shoppingapp.AssetLoader
 import com.example.shoppingapp.network.ApiClient
-import com.example.shoppingapp.repository.CategoryRemoteDataSource
-import com.example.shoppingapp.repository.CategoryRepository
-import com.example.shoppingapp.repository.HomeAssetDataSource
-import com.example.shoppingapp.repository.HomeRepository
+import com.example.shoppingapp.repository.category.CategoryRemoteDataSource
+import com.example.shoppingapp.repository.category.CategoryRepository
+import com.example.shoppingapp.repository.home.HomeAssetDataSource
+import com.example.shoppingapp.repository.home.HomeRepository
 import com.example.shoppingapp.ui.category.CategoryViewModel
 import com.example.shoppingapp.ui.home.HomeViewModel
 

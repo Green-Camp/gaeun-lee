@@ -1,4 +1,4 @@
-package com.example.shoppingapp.repository
+package com.example.shoppingapp.repository.category
 
 import com.example.shoppingapp.model.Category
 
