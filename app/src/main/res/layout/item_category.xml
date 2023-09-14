@@ -6,6 +6,10 @@
     <data>
 
         <variable
+            name="viewModel"
+            type="com.example.shoppingapp.ui.category.CategoryViewModel" />
+
+        <variable
             name="category"
             type="com.example.shoppingapp.model.Category" />
 
@@ -17,7 +21,8 @@
         android:layout_marginStart="4dp"
         android:layout_marginEnd="4dp"
         android:layout_marginBottom="16dp"
-        android:background="@drawable/background_bluegrey_r20">
+        android:background="@drawable/background_bluegrey_r20"
+        android:onClick="@{() -> viewModel.openCategoryDetail(category)}">
 
         <com.google.android.material.imageview.ShapeableImageView
             android:id="@+id/iv_category_thumbnail"
@@ -55,9 +60,9 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
             android:layout_marginBottom="16dp"
+            android:maxLines="1"
             android:paddingStart="10dp"
             android:paddingEnd="10dp"
-            android:maxLines="1"
             android:text="@{category.label}"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"

@@ -6,6 +6,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.shoppingapp.model.Category
 import com.example.shoppingapp.repository.category.CategoryRepository
+import com.example.shoppingapp.ui.common.Event
 import kotlinx.coroutines.launch
 
 class CategoryViewModel(private val categoryRepository: CategoryRepository) : ViewModel() {
@@ -13,8 +14,15 @@ class CategoryViewModel(private val categoryRepository: CategoryRepository) : Vi
     private val _items = MutableLiveData<List<Category>>()
     val items: LiveData<List<Category>> = _items
 
+    private val _openCategoryEvent = MutableLiveData<Event<Category>>()
+    val openCategoryEvent: LiveData<Event<Category>> = _openCategoryEvent
+
     init {
         loadCategory()
+    }
+
+    fun openCategoryDetail(category: Category) {
+        _openCategoryEvent.value = Event(category)
     }
 
     private fun loadCategory() {
