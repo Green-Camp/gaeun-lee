@@ -7,9 +7,12 @@ import com.example.shoppingapp.AssetLoader
 import com.example.shoppingapp.network.ApiClient
 import com.example.shoppingapp.repository.category.CategoryRemoteDataSource
 import com.example.shoppingapp.repository.category.CategoryRepository
+import com.example.shoppingapp.repository.categorydetail.CategoryDetailRemoteDataSource
+import com.example.shoppingapp.repository.categorydetail.CategoryDetailRepository
 import com.example.shoppingapp.repository.home.HomeAssetDataSource
 import com.example.shoppingapp.repository.home.HomeRepository
 import com.example.shoppingapp.ui.category.CategoryViewModel
+import com.example.shoppingapp.ui.categorydetail.CategoryDetailViewModel
 import com.example.shoppingapp.ui.home.HomeViewModel
 
 class ViewModelFactory(private val context: Context) : ViewModelProvider.Factory {
@@ -23,6 +26,12 @@ class ViewModelFactory(private val context: Context) : ViewModelProvider.Factory
             modelClass.isAssignableFrom(CategoryViewModel::class.java) -> {
                 val repository = CategoryRepository(CategoryRemoteDataSource(ApiClient.create()))
                 CategoryViewModel(repository) as T
+            }
+
+            modelClass.isAssignableFrom(CategoryDetailViewModel::class.java) -> {
+                val repository =
+                    CategoryDetailRepository(CategoryDetailRemoteDataSource(ApiClient.create()))
+                CategoryDetailViewModel(repository) as T
             }
 
             else -> {
