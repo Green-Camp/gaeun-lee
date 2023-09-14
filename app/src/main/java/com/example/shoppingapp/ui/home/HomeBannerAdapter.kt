@@ -1,21 +1,12 @@
 package com.example.shoppingapp.ui.home
 
-import android.graphics.Color
-import android.graphics.drawable.ColorDrawable
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
-import android.widget.TextView
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
-import com.example.shoppingapp.GlideApp
-import com.example.shoppingapp.R
 import com.example.shoppingapp.databinding.ItemHomeBannerBinding
 import com.example.shoppingapp.model.Banner
-import java.text.DecimalFormat
-import kotlin.math.roundToInt
 
 class HomeBannerAdapter :
     ListAdapter<Banner, HomeBannerAdapter.HomeBannerViewHolder>(BannerDiffCallback()) {
@@ -44,7 +35,7 @@ class HomeBannerAdapter :
 
 class BannerDiffCallback : DiffUtil.ItemCallback<Banner>() {
     override fun areItemsTheSame(oldItem: Banner, newItem: Banner): Boolean {
-        return oldItem.productDetail.productId == newItem.productDetail.productId
+        return oldItem.product.productId == newItem.product.productId
     }
 
     override fun areContentsTheSame(oldItem: Banner, newItem: Banner): Boolean {

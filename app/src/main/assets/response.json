@@ -1,0 +1,156 @@
+{
+  "categories": [
+    {
+      "category_id": "fashion_female",
+      "label": "여성패션",
+      "thumbnail_image_url": "https://github.com/Green-Camp/gaeun-lee/assets/92314556/ee1551a6-e08c-41f1-9768-b2e5a1bc4b76",
+      "updated": false
+    },
+    {
+      "category_id": "fashion_male",
+      "label": "남성패션",
+      "thumbnail_image_url": "https://github.com/Green-Camp/gaeun-lee/assets/92314556/97b6349b-293c-4266-a2d4-0451418cddc8",
+      "updated": false
+    },
+    {
+      "category_id": "kids",
+      "label": "유아동",
+      "thumbnail_image_url": "https://github.com/Green-Camp/gaeun-lee/assets/92314556/d5246dcc-734a-48a1-b625-17fd9da02b00",
+      "updated": false
+    },
+    {
+      "category_id": "electronics",
+      "label": "가전/디지털",
+      "thumbnail_image_url": "https://github.com/Green-Camp/gaeun-lee/assets/92314556/66ec3877-0b91-43a4-8832-d7c43fb24ada",
+      "updated": false
+    },
+    {
+      "category_id": "furniture",
+      "label": "가구/인테리어",
+      "thumbnail_image_url": "https://github.com/Green-Camp/gaeun-lee/assets/92314556/672a6e51-3ad5-4991-8ddf-c4d40e2f9aab",
+      "updated": true
+    },
+    {
+      "category_id": "sports",
+      "label": "스포츠/레저",
+      "thumbnail_image_url": "https://github.com/Green-Camp/gaeun-lee/assets/92314556/48a03921-a1aa-43d6-a8e6-8675f89d12ff",
+      "updated": false
+    },
+    {
+      "category_id": "books",
+      "label": "도서/음반",
+      "thumbnail_image_url": "https://github.com/Green-Camp/gaeun-lee/assets/92314556/cd14d649-f8f7-400e-b5dc-14b607e0e9d8",
+      "updated": false
+    },
+    {
+      "category_id": "pets",
+      "label": "반려동물",
+      "thumbnail_image_url": "https://github.com/Green-Camp/gaeun-lee/assets/92314556/91802f3f-0598-48d4-9c07-37a9af34a81b",
+      "updated": false
+    },
+    {
+      "category_id": "car",
+      "label": "자동차",
+      "thumbnail_image_url": "https://github.com/Green-Camp/gaeun-lee/assets/92314556/2ba5b2e5-03dc-417e-bf4b-b8d50e3649bb",
+      "updated": false
+    },
+    {
+      "category_id": "fancy_goods",
+      "label": "잡화",
+      "thumbnail_image_url": "https://github.com/Green-Camp/gaeun-lee/assets/92314556/20f61388-1c63-48c5-9ec8-40cf20f800c5",
+      "updated": false
+    },
+    {
+      "category_id": "food",
+      "label": "식품",
+      "thumbnail_image_url": "https://github.com/Green-Camp/gaeun-lee/assets/92314556/61dff37a-5432-4721-afb2-f725fc57c875",
+      "updated": false
+    },
+    {
+      "category_id": "beauty",
+      "label": "뷰티",
+      "thumbnail_image_url": "https://github.com/Green-Camp/gaeun-lee/assets/92314556/1c659e14-e0c2-4e08-8d42-198826fdbb11",
+      "updated": true
+    }
+  ],
+  "fashion_female": {
+    "top_selling": {
+      "title": {
+        "text": "인기상품"
+      },
+      "categories": [
+        {
+          "category_id": "fashion_jacket",
+          "label": "자켓",
+          "thumbnail_image_url": "https://github.com/gaeun5744/bootcamp_practice/assets/92314556/14e62456-0ef4-4037-a212-8c03ece54480",
+          "updated": true
+        },
+        {
+          "category_id": "fashion_sweater",
+          "label": "스웨터",
+          "thumbnail_image_url": "https://github.com/gaeun5744/bootcamp_practice/assets/92314556/900413fe-b2a3-4ff0-8fa6-768db7dc21e9",
+          "updated": false
+        },
+        {
+          "category_id": "fashion_cap",
+          "label": "캡모자",
+          "thumbnail_image_url": "https://github.com/gaeun5744/bootcamp_practice/assets/92314556/50c23542-0fb5-47f8-aaac-94a21fc2983c",
+          "updated": false
+        },
+        {
+          "category_id": "fashion_belt",
+          "label": "벨트",
+          "thumbnail_image_url": "https://github.com/gaeun5744/bootcamp_practice/assets/92314556/f5856005-728f-4dbe-bf12-b42ec752ab06",
+          "updated": false
+        },
+        {
+          "category_id": "fashion_shirts",
+          "label": "셔츠",
+          "thumbnail_image_url": "https://github.com/gaeun5744/bootcamp_practice/assets/92314556/3167f0df-7212-4956-bf65-9c762e3c1c43",
+          "updated": false
+        },
+        {
+          "category_id": "fashion_skirt",
+          "label": "스커트",
+          "thumbnail_image_url": "https://github.com/gaeun5744/bootcamp_practice/assets/92314556/50745b26-3264-407b-adc5-d419872be720",
+          "updated": false
+        }
+      ]
+    },
+    "promotions": {
+      "title": {
+        "text": "추천상품"
+      },
+      "items": [
+        {
+          "label": "[19차 리오더] 페이크 레더 숏 테일러 자켓 블랙",
+          "discount_rate": 10,
+          "price": 90000,
+          "representative_image_url": "https://github.com/gaeun5744/bootcamp_practice/assets/92314556/72f5d5b5-0b31-4825-9ff0-f8c7a1de02ba",
+          "product_id": "jacket_1"
+        },
+        {
+          "label": "캐시미어 100% 터틀넥 스웨터",
+          "discount_rate": 15,
+          "price": 70000,
+          "representative_image_url": "https://github.com/gaeun5744/bootcamp_practice/assets/92314556/3ceb376e-2463-473e-9168-d74887e45599",
+          "product_id": "sweater_1"
+        },
+        {
+          "label": "반팔 스트라이프 스웨터",
+          "discount_rate": 20,
+          "price": 30000,
+          "representative_image_url": "https://github.com/gaeun5744/bootcamp_practice/assets/92314556/bdb846cf-7867-4810-b219-24d327ef661d",
+          "product_id": "sweater_2"
+        },
+        {
+          "label": "화이트 스포츠 점퍼",
+          "discount_rate": 20,
+          "price": 150000,
+          "representative_image_url": "https://github.com/gaeun5744/bootcamp_practice/assets/92314556/3fa5268f-75e5-4ec4-9276-6f22479967e5",
+          "product_id": "sports_1"
+        }
+      ]
+    }
+  }
+}
