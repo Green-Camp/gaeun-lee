@@ -1,21 +1,65 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:paddingStart="8dp"
-    android:paddingTop="16dp"
-    android:paddingEnd="8dp"
-    android:paddingBottom="16dp">
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <ImageView
-        android:padding="4dp"
-        android:layout_width="48dp"
-        android:background="@drawable/background_circle_gradient"
-        android:layout_height="48dp"
-        android:scaleType="centerCrop"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <data>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <variable
+            name="category"
+            type="com.example.shoppingapp.model.Category" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingStart="8dp"
+        android:paddingTop="16dp"
+        android:paddingEnd="8dp"
+        android:paddingBottom="16dp">
+
+        <ImageView
+            android:id="@+id/iv_category_top_selling_image"
+            circleImageUrl="@{category.thumbnailImageUrl}"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="@drawable/background_circle_gradient"
+            android:padding="4dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_category_top_selling_badge"
+            style="@style/TextCaption2.White.Bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/background_purple_r24"
+            android:paddingStart="6dp"
+            android:paddingTop="3dp"
+            android:paddingEnd="6dp"
+            isVisible="@{category.updated}"
+            android:paddingBottom="3dp"
+            app:layout_constraintEnd_toEndOf="@id/iv_category_top_selling_image"
+            app:layout_constraintTop_toTopOf="@id/iv_category_top_selling_image"
+            android:text="N" />
+
+        <TextView
+            android:text="@{category.label}"
+            android:id="@+id/tv_category_top_seeling_label"
+            style="@style/TextCaption2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:gravity="center"
+            android:maxLines="1"
+            app:layout_constraintEnd_toEndOf="@id/iv_category_top_selling_image"
+            app:layout_constraintStart_toStartOf="@id/iv_category_top_selling_image"
+            app:layout_constraintTop_toBottomOf="@id/iv_category_top_selling_image"
+            tools:text="자켓" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
