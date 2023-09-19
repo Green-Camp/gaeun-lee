@@ -15,7 +15,8 @@ class CategoryPromotionAdapter :
         parent: ViewGroup,
         viewType: Int,
     ): CategoryPromotionViewHolder {
-        val binding = ItemCategoryPromotionBinding.inflate(LayoutInflater.from(parent.context))
+        val binding =
+            ItemCategoryPromotionBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         return CategoryPromotionViewHolder(binding)
     }
 
