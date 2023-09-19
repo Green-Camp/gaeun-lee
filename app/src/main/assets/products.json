@@ -1,0 +1,46 @@
+{
+  "products": {
+    "FW-twg-sweater-1": {
+      "brand_name": "twg. official",
+      "label": "캐시미어 100% 터틀넥 스웨터",
+      "discount_rate": 9,
+      "price": 102000,
+      "type": "Free",
+      "representative_image_url": "https://github.com/Green-Camp/gaeun-lee/assets/92314556/872fc8aa-15e3-4823-b428-651eeda6b3c5",
+      "descriptions": [
+        {
+          "id": "FW-twg-sweater-1-desc-1",
+          "image_url": "https://github.com/Green-Camp/gaeun-lee/assets/92314556/5f34d706-997c-4fcd-9fbe-335e9273751d"
+        },
+        {
+          "id": "FW-twg-sweater-1-desc-2",
+          "image_url": "https://github.com/Green-Camp/gaeun-lee/assets/92314556/29b6ed84-002a-4626-8abc-bf437d6b2249"
+        }
+      ],
+      "product_id": "FW-twg-sweater-1"
+    },
+    "desk-1": {
+      "brand_name": "Desk",
+      "label": "슬림 데스크 800",
+      "discount_rate": 16,
+      "price": 160000,
+      "type": "1800x720",
+      "representative_image_url": "(https://github.com/Green-Camp/gaeun-lee/assets/92314556/c1319179-b309-4bdc-adbb-f9a3c59e33b8",
+      "descriptions": [
+        {
+          "id": "desk-1-desc-1",
+          "image_url": "https://github.com/Green-Camp/gaeun-lee/assets/92314556/aeda3a7b-908b-4356-b760-4d357214ac20"
+        },
+        {
+          "id": "desk-1-desc-2",
+          "image_url": "https://github.com/Green-Camp/gaeun-lee/assets/92314556/fd63fcc2-ab2e-4c09-90a1-5d0a90b0d004"
+        },
+        {
+          "id": "desk-1-desc-3",
+          "image_url": "https://github.com/Green-Camp/gaeun-lee/assets/92314556/84d06f69-10f5-4915-bfb6-cfe2192994d1"
+        }
+      ],
+      "product_id": "desk-1"
+    }
+  }
+}
