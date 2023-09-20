@@ -8,14 +8,18 @@ import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
+import androidx.recyclerview.widget.ConcatAdapter
 import com.example.shoppingapp.*
 import com.example.shoppingapp.common.KEY_PRODUCT_ID
 import com.example.shoppingapp.databinding.FragmentHomeBinding
 import com.example.shoppingapp.ui.common.EventObserver
+import com.example.shoppingapp.ui.common.ProductClickListener
+import com.example.shoppingapp.ui.common.ProductPromotionAdapter
+import com.example.shoppingapp.ui.common.SectionTitleAdapter
 import com.example.shoppingapp.ui.common.ViewModelFactory
 import com.google.android.material.tabs.TabLayoutMediator
 
-class HomeFragment : Fragment() {
+class HomeFragment : Fragment(), ProductClickListener {
 
     private val viewModel: HomeViewModel by viewModels { ViewModelFactory(requireContext()) }
     private lateinit var binding: FragmentHomeBinding
@@ -36,6 +40,17 @@ class HomeFragment : Fragment() {
         setToolbar()
         setNavigation()
         setTopBanners()
+        setListAdapter()
+    }
+
+    // ProductClickListener
+    override fun onProductClick(productId: String) {
+        findNavController().navigate(
+            R.id.action_home_to_product_detail,
+            bundleOf(
+                KEY_PRODUCT_ID to "desk-1",
+            ),
+        )
     }
 
     private fun setToolbar() {
@@ -84,6 +99,16 @@ class HomeFragment : Fragment() {
                 this,
             ) { tab, position ->
             }.attach()
+        }
+    }
+
+    private fun setListAdapter() {
+        val titleAdapter = SectionTitleAdapter()
+        val promotionAdapter = ProductPromotionAdapter(this)
+        binding.rvHome.adapter = ConcatAdapter(titleAdapter, promotionAdapter)
+        viewModel.promotions.observe(viewLifecycleOwner) { promotions ->
+            titleAdapter.submitList(listOf(promotions.title))
+            promotionAdapter.submitList(promotions.items)
         }
     }
 }

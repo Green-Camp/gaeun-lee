@@ -5,10 +5,10 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
-import com.example.shoppingapp.databinding.ItemCategoryPromotionBinding
+import com.example.shoppingapp.databinding.ItemProductPromotionBinding
 import com.example.shoppingapp.model.Product
 
-class ProductPromotionAdapter :
+class ProductPromotionAdapter(private val clickListener: ProductClickListener) :
     ListAdapter<Product, ProductPromotionAdapter.ProductPromotionViewHolder>(ProductDiffCallBack()) {
 
     override fun onCreateViewHolder(
@@ -16,7 +16,7 @@ class ProductPromotionAdapter :
         viewType: Int,
     ): ProductPromotionViewHolder {
         val binding =
-            ItemCategoryPromotionBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+            ItemProductPromotionBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         return ProductPromotionViewHolder(binding)
     }
 
@@ -27,9 +27,10 @@ class ProductPromotionAdapter :
         holder.bind(getItem(position))
     }
 
-    class ProductPromotionViewHolder(private val binding: ItemCategoryPromotionBinding) :
+    inner class ProductPromotionViewHolder(private val binding: ItemProductPromotionBinding) :
         RecyclerView.ViewHolder(binding.root) {
         fun bind(product: Product) {
+            binding.clickListener = clickListener
             binding.product = product
             binding.executePendingBindings()
         }
