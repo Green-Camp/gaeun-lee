@@ -1,4 +1,4 @@
-package com.example.shoppingapp.ui.categorydetail
+package com.example.shoppingapp.ui.common
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -8,26 +8,26 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.shoppingapp.databinding.ItemCategoryPromotionBinding
 import com.example.shoppingapp.model.Product
 
-class CategoryPromotionAdapter :
-    ListAdapter<Product, CategoryPromotionAdapter.CategoryPromotionViewHolder>(ProductDiffCallBack()) {
+class ProductPromotionAdapter :
+    ListAdapter<Product, ProductPromotionAdapter.ProductPromotionViewHolder>(ProductDiffCallBack()) {
 
     override fun onCreateViewHolder(
         parent: ViewGroup,
         viewType: Int,
-    ): CategoryPromotionViewHolder {
+    ): ProductPromotionViewHolder {
         val binding =
             ItemCategoryPromotionBinding.inflate(LayoutInflater.from(parent.context), parent, false)
-        return CategoryPromotionViewHolder(binding)
+        return ProductPromotionViewHolder(binding)
     }
 
     override fun onBindViewHolder(
-        holder: CategoryPromotionViewHolder,
+        holder: ProductPromotionViewHolder,
         position: Int,
     ) {
         holder.bind(getItem(position))
     }
 
-    class CategoryPromotionViewHolder(private val binding: ItemCategoryPromotionBinding) :
+    class ProductPromotionViewHolder(private val binding: ItemCategoryPromotionBinding) :
         RecyclerView.ViewHolder(binding.root) {
         fun bind(product: Product) {
             binding.product = product
