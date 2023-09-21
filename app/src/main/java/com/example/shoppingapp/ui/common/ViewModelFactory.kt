@@ -14,6 +14,7 @@ import com.example.shoppingapp.repository.home.HomeAssetDataSource
 import com.example.shoppingapp.repository.home.HomeRepository
 import com.example.shoppingapp.repository.productdetail.ProductDetailRemoteDataSource
 import com.example.shoppingapp.repository.productdetail.ProductDetailRepository
+import com.example.shoppingapp.ui.cart.CartViewModel
 import com.example.shoppingapp.ui.category.CategoryViewModel
 import com.example.shoppingapp.ui.categorydetail.CategoryDetailViewModel
 import com.example.shoppingapp.ui.home.HomeViewModel
@@ -42,6 +43,11 @@ class ViewModelFactory(private val context: Context) : ViewModelProvider.Factory
                 val repository =
                     ProductDetailRepository(ProductDetailRemoteDataSource(ServiceLocator.provideApiClient()))
                 ProductDetailViewModel(repository) as T
+            }
+
+            modelClass.isAssignableFrom(CartViewModel::class.java) -> {
+
+                CartViewModel() as T
             }
 
             else -> {
