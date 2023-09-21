@@ -10,4 +10,5 @@ ext {
     navVersion = "2.5.0"
     glideVersion="4.12.0"
     retrofitVersion = "2.9.0"
+    roomVersion = "2.5.0"
 }

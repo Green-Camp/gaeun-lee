@@ -5,7 +5,6 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import com.example.shoppingapp.AssetLoader
 import com.example.shoppingapp.ServiceLocator
-import com.example.shoppingapp.network.ApiClient
 import com.example.shoppingapp.repository.category.CategoryRemoteDataSource
 import com.example.shoppingapp.repository.category.CategoryRepository
 import com.example.shoppingapp.repository.categorydetail.CategoryDetailRemoteDataSource
@@ -29,7 +28,8 @@ class ViewModelFactory(private val context: Context) : ViewModelProvider.Factory
             }
 
             modelClass.isAssignableFrom(CategoryViewModel::class.java) -> {
-                val repository = CategoryRepository(CategoryRemoteDataSource(ServiceLocator.provideApiClient()))
+                val repository =
+                    CategoryRepository(CategoryRemoteDataSource(ServiceLocator.provideApiClient()))
                 CategoryViewModel(repository) as T
             }
 
@@ -42,12 +42,14 @@ class ViewModelFactory(private val context: Context) : ViewModelProvider.Factory
             modelClass.isAssignableFrom(ProductDetailViewModel::class.java) -> {
                 val repository =
                     ProductDetailRepository(ProductDetailRemoteDataSource(ServiceLocator.provideApiClient()))
-                ProductDetailViewModel(repository) as T
+                ProductDetailViewModel(
+                    repository,
+                    ServiceLocator.provideCartRepository(context),
+                ) as T
             }
 
             modelClass.isAssignableFrom(CartViewModel::class.java) -> {
-
-                CartViewModel() as T
+                CartViewModel(ServiceLocator.provideCartRepository(context)) as T
             }
 
             else -> {

@@ -6,6 +6,10 @@
     <data>
 
         <variable
+            name="viewModel"
+            type="com.example.shoppingapp.ui.productdetail.ProductDetailViewModel" />
+
+        <variable
             name="product"
             type="com.example.shoppingapp.model.Product" />
 
@@ -190,6 +194,7 @@
                 android:layout_marginEnd="16dp"
                 android:layout_marginBottom="12dp"
                 android:background="@drawable/background_gradient_r24"
+                android:onClick="@{() -> viewModel.addCart(product)}"
                 android:text="장바구니 담기"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"

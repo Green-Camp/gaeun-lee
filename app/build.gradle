@@ -75,5 +75,10 @@ dependencies {
     // Kotlin
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.4"
 
+    // Database
+    implementation "androidx.room:room-runtime:$roomVersion"
+    implementation "androidx.room:room-ktx:$roomVersion"
+    kapt "androidx.room:room-compiler:$roomVersion"
+
 
 }
