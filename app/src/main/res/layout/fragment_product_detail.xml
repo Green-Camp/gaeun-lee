@@ -51,6 +51,7 @@
                     android:layout_marginStart="16dp"
                     android:layout_marginEnd="16dp"
                     android:contentDescription="@string/description_product_thumbnail"
+                    android:scaleType="centerCrop"
                     app:layout_constraintDimensionRatio="w, 1:1"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -59,7 +60,7 @@
 
                 <TextView
                     android:id="@+id/tv_product_brand_name"
-                    style="@style/TextSubtitle3"
+                    style="@style/TextSubtitle3.Grey03"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
@@ -69,7 +70,7 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/iv_product_thumbnail"
-                    tools:text="twg.official" />
+                    tools:text="twg. official" />
 
                 <TextView
                     android:id="@+id/tv_product_label"
@@ -83,7 +84,7 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/tv_product_brand_name"
-                    tools:text="[19차 리오더] 페이크 레더 숏 테일러 자켓" />
+                    tools:text="[19차 리오더] 페이크 레더 숏 테일러 자켓 블랙(1 color)" />
 
                 <TextView
                     android:id="@+id/tv_product_discount_rate"
@@ -130,7 +131,7 @@
                     android:layout_marginTop="24dp"
                     android:background="#eeeff1"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/tv_product_discount_price" />
+                    app:layout_constraintTop_toBottomOf="@id/tv_product_price" />
 
                 <TextView
                     android:id="@+id/tv_product_detail_image_title"
@@ -152,11 +153,14 @@
                     android:nestedScrollingEnabled="false"
                     android:orientation="vertical"
                     app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/tv_product_detail_image_title" />
+                    app:layout_constraintTop_toBottomOf="@id/tv_product_detail_image_title"
+                    tools:listitem="@layout/item_product_description" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
+
         </androidx.core.widget.NestedScrollView>
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -200,9 +204,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
-
         </androidx.constraintlayout.widget.ConstraintLayout>
-
 
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
 </layout>
