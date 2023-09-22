@@ -65,7 +65,7 @@ class ProductDetailFragment : Fragment() {
         binding.rvProductDetail.adapter = descriptionAdapter
         viewModel.product.observe(viewLifecycleOwner) { product ->
             binding.product = product
-            descriptionAdapter.submitList(product.description)
+            descriptionAdapter.submitList(product.descriptions)
         }
     }
 }

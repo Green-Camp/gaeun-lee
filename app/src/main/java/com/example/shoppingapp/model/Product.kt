@@ -10,7 +10,7 @@ data class Product(
     val type: String?,
     @SerializedName("thumbnail_image_url") val thumbnailImageUrl: String?,
     @SerializedName("representative_image_url") val representativeImageUrl: String?,
-    val description: List<Description>?,
+    val descriptions: List<Description>?,
     @SerializedName("product_id") val productId: String,
 )
 
